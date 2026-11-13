@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MediCitas · Gestión de citas médicas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/comun/styles.css">
+</head>
+<body>
+  <div class="portada"><div class="portada-caja">
+    <div class="marca-logo" data-ico="cruz"></div>
+    <h1>MediCitas · Gestión de citas médicas</h1>
+    <p class="sub">Taller final de persistencia — la misma aplicación con dos modelos de datos</p>
+    <div class="versiones">
+      <a class="panel version" href="/relacional/">
+        <div class="titulo-icono" data-ico="baseDatos"></div>
+        <h2>Versión relacional</h2>
+        <p>PostgreSQL en Supabase. Tablas con llaves primarias y foráneas, restricciones e integridad referencial.</p>
+        <span class="enlace">Abrir versión relacional <span data-ico="flecha"></span></span>
+      </a>
+      <a class="panel version" href="/firestore/">
+        <div class="titulo-icono verde" data-ico="documento"></div>
+        <h2>Versión no relacional</h2>
+        <p>Cloud Firestore de Firebase. Colecciones de documentos con referencias y datos desnormalizados.</p>
+        <span class="enlace">Abrir versión Firestore <span data-ico="flecha"></span></span>
+      </a>
+    </div>
+    <p class="pie">Citas · Pacientes · Horario · Doctores (con especialidad) · Medicamentos</p>
+  </div></div>
+  <script type="module">
+    import { icono } from '/comun/iconos.js';
+    document.querySelectorAll('[data-ico]').forEach(e => { e.innerHTML = icono(e.dataset.ico); });
+  </script>
+</body>
+</html>

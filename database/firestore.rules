@@ -1,0 +1,10 @@
+rules_version = '2';
+// Reglas de Firestore para el taller (proyecto académico: lectura y escritura abiertas).
+// Pegar en: Firebase Console > Firestore Database > Reglas > Publicar
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /{coleccion}/{id} {
+      allow read, write: if coleccion in ['pacientes', 'doctores', 'horario', 'citas', 'medicamentos'];
+    }
+  }
+}
